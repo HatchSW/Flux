@@ -11,7 +11,7 @@ $ git clone https://github.com/HatchSW/Flux.git
 $ cd sasapp
 ```
 
-## Running SAS App
+## Running Flux
 Open the flux.xcodeproj in your xcode editor and hit the run button (black arrow) in the left corner.
 
 ## Pushing your changes
