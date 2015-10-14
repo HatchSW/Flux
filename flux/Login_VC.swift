@@ -15,7 +15,7 @@ class Login_VC: UIViewController {
     
     var authenticatedUser: NSObject?
     
-    
+    //Push test comment from Scott Quach
     override func viewDidLoad() {
         super.viewDidLoad()
 
