@@ -130,16 +130,26 @@
                                 <rect key="frame" x="0.0" y="384" width="600" height="216"/>
                                 <animations/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23a-sS-aOo">
+                                <rect key="frame" x="150" y="346" width="300" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.25924033270000002" green="0.35168866259999998" blue="0.504736564" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Check-In"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gKx-uM-hQf" firstAttribute="trailing" secondItem="aRO-nB-u6y" secondAttribute="trailingMargin" id="1Z3-5Y-lS6"/>
                             <constraint firstItem="gKx-uM-hQf" firstAttribute="centerX" secondItem="aRO-nB-u6y" secondAttribute="centerX" id="E06-0A-JOl"/>
+                            <constraint firstItem="23a-sS-aOo" firstAttribute="top" secondItem="gKx-uM-hQf" secondAttribute="bottom" constant="297" id="Ewb-wc-hzK"/>
+                            <constraint firstItem="W9g-Eq-FdL" firstAttribute="top" secondItem="23a-sS-aOo" secondAttribute="bottom" constant="8" id="MHq-5s-eV1"/>
+                            <constraint firstItem="23a-sS-aOo" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" constant="130" id="PIo-t9-dPQ"/>
                             <constraint firstItem="W9g-Eq-FdL" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" constant="-20" id="PlV-C7-cSA"/>
                             <constraint firstItem="gKx-uM-hQf" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" id="T2f-jG-3UV"/>
                             <constraint firstItem="sft-Rp-8sr" firstAttribute="top" secondItem="W9g-Eq-FdL" secondAttribute="bottom" id="Txs-bb-YTK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W9g-Eq-FdL" secondAttribute="trailing" constant="-20" id="U0v-cz-FoQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="23a-sS-aOo" secondAttribute="trailing" constant="130" id="a6B-NX-0T3"/>
                             <constraint firstItem="gKx-uM-hQf" firstAttribute="top" secondItem="iwz-4D-1AG" secondAttribute="bottom" constant="8" id="u3h-bk-a4t"/>
                         </constraints>
                     </view>

@@ -18,7 +18,12 @@ class StudentDashboard_VC: UIViewController {
         super.viewDidLoad()
         
         //display student information
-        nameLabel.text = "\(student!.firstName) \(student!.lastName)"
+//        nameLabel.text = "\(student!.firstName) \(student!.lastName)"
+        
+        
+        
+        
+        
         
     }
     
