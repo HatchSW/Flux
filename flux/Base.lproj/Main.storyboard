@@ -53,14 +53,38 @@
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fA-50-i42"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wo-LL-KGH">
+                                <rect key="frame" x="251" y="512" width="98" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Temp Teacher"/>
+                                <connections>
+                                    <segue destination="6JA-6x-OTQ" kind="show" id="tOa-NS-jLy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0X-Be-TO2">
+                                <rect key="frame" x="252" y="448" width="97" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Temp Student"/>
+                                <connections>
+                                    <segue destination="4na-tA-vek" kind="show" id="rQz-So-ebC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.25924033270000002" green="0.35168866259999998" blue="0.504736564" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="eGs-zd-ZeL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="38" id="0ob-MH-QDk"/>
+                            <constraint firstItem="0wo-LL-KGH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="231" id="7rl-14-Ax8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eGs-zd-ZeL" secondAttribute="trailing" constant="259" id="CeS-v8-hd1"/>
                             <constraint firstItem="a1z-Zk-MYW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F4b-PJ-KNS"/>
                             <constraint firstItem="JeW-oh-W05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mvo-UC-V04"/>
+                            <constraint firstItem="0wo-LL-KGH" firstAttribute="top" secondItem="p0X-Be-TO2" secondAttribute="bottom" constant="34" id="MyQ-am-5gd"/>
+                            <constraint firstItem="p0X-Be-TO2" firstAttribute="top" secondItem="eGs-zd-ZeL" secondAttribute="bottom" constant="95" id="N1v-3P-Tyw"/>
+                            <constraint firstItem="0wo-LL-KGH" firstAttribute="top" secondItem="eGs-zd-ZeL" secondAttribute="bottom" constant="159" id="Nit-Ci-B9o"/>
+                            <constraint firstItem="p0X-Be-TO2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="232" id="Tbd-2y-nm8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0wo-LL-KGH" secondAttribute="trailing" constant="231" id="X47-Yj-yxf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0wo-LL-KGH" secondAttribute="bottom" constant="58" id="Y2G-p2-Zal"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p0X-Be-TO2" secondAttribute="trailing" constant="231" id="a6K-Sg-6N1"/>
                             <constraint firstItem="eGs-zd-ZeL" firstAttribute="top" secondItem="a1z-Zk-MYW" secondAttribute="bottom" constant="8" id="bdX-l1-91S"/>
                             <constraint firstItem="eGs-zd-ZeL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="259" id="cfF-0K-3MS"/>
                             <constraint firstItem="a1z-Zk-MYW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g5F-xo-ntG"/>
@@ -147,4 +171,8 @@
             <point key="canvasLocation" x="725" y="997"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wzi-TC-MbZ"/>
+        <segue reference="DZn-rg-luL"/>
+    </inferredMetricsTieBreakers>
 </document>
