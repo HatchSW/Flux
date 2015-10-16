@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D55B84C1BCB601B00491CE0 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84B1BCB601B00491CE0 /* Authenticator.swift */; settings = {ASSET_TAGS = (); }; };
-		9D55B84E1BCB607400491CE0 /* Login_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84D1BCB607400491CE0 /* Login_VC.swift */; settings = {ASSET_TAGS = (); }; };
-		9D55B8501BCB632400491CE0 /* StudentDashboard_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84F1BCB632400491CE0 /* StudentDashboard_VC.swift */; settings = {ASSET_TAGS = (); }; };
-		9D55B8561BCB67EE00491CE0 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B8551BCB67EE00491CE0 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
-		9D55B8581BCB6D8200491CE0 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B8571BCB6D8200491CE0 /* Teacher.swift */; settings = {ASSET_TAGS = (); }; };
-		9D55B85A1BCB742800491CE0 /* TeacherDashboard_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B8591BCB742800491CE0 /* TeacherDashboard_VC.swift */; settings = {ASSET_TAGS = (); }; };
+		9D55B84C1BCB601B00491CE0 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84B1BCB601B00491CE0 /* Authenticator.swift */; };
+		9D55B84E1BCB607400491CE0 /* Login_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84D1BCB607400491CE0 /* Login_VC.swift */; };
+		9D55B8501BCB632400491CE0 /* StudentDashboard_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84F1BCB632400491CE0 /* StudentDashboard_VC.swift */; };
+		9D55B8561BCB67EE00491CE0 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B8551BCB67EE00491CE0 /* Student.swift */; };
+		9D55B8581BCB6D8200491CE0 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B8571BCB6D8200491CE0 /* Teacher.swift */; };
+		9D55B85A1BCB742800491CE0 /* TeacherDashboard_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B8591BCB742800491CE0 /* TeacherDashboard_VC.swift */; };
 		9DA6D37B1BC9CDD500E90A3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6D37A1BC9CDD500E90A3A /* AppDelegate.swift */; };
 		9DA6D3801BC9CDD500E90A3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6D37E1BC9CDD500E90A3A /* Main.storyboard */; };
 		9DA6D3821BC9CDD500E90A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6D3811BC9CDD500E90A3A /* Assets.xcassets */; };
@@ -218,6 +218,7 @@
 		9DA6D36F1BC9CDD500E90A3A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Hatch;
 				TargetAttributes = {
@@ -434,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flux/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.flux;
@@ -445,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flux/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.flux;
