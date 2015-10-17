@@ -10,21 +10,28 @@ import UIKit
 
 class Login_VC: UIViewController {
 
-    
-    //Dawit Was here
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
     var authenticatedUser: NSObject?
     
-    //Push test comment from Scott Quach
+    
+    // MARK: - View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //TODO: load last logged user from NSUserDefaults
+        
+        //Mask the profile image into a circle with a white boarder
+        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
+        profileImage.clipsToBounds = true
+        profileImage.layer.borderWidth = 3.0
+        profileImage.layer.borderColor = UIColor.whiteColor().CGColor
+
     }
 
-    
+    // MARK: - IBActions
     @IBAction func loginPressed(sender: UIButton) {
         
         let user = Authenticator.authenticate(username.text!, password: password.text!)
@@ -61,7 +68,6 @@ class Login_VC: UIViewController {
             dashboardVC.teacher = authenticatedUser as? Teacher
             
         }
-        // Pass the selected object to the new view controller.
     }
 
 
