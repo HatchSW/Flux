@@ -13,12 +13,12 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
     
     var tempCourses = ["Period 1", "Period 2", "Period 3", "Period 4", "Period 5", "Period 6"]
     
-    
-    @IBOutlet weak var coursePicker: UIPickerView!
-    
     var student: Student?
     
+    @IBOutlet weak var coursePicker: UIPickerView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var tempConfirmChoiceLabel: UILabel!
+    @IBOutlet weak var timeUntilLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,46 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         coursePicker.dataSource = self
         coursePicker.delegate = self
         
+        determineTimeTillSas()
+        
         //display student information
 //        nameLabel.text = "\(student!.firstName) \(student!.lastName)"
         
         
     }
     
+    @IBAction func CheckInButtonPressed(sender: AnyObject) {
+        
+        //ToDo: Check student into selected class
+    }
    
+    func determineTimeTillSas() {
+        //SAS starts 9:40 am
+        
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date)
+//        let hour = components.hour;
+        let minute = components.minute;
+//        let second = components.second;
+        
+        if minute <= 40{
+            let untilMinute = 40 - minute
+            timeUntilLabel.text = String(untilMinute) + "minutes"
+
+        }else{
+            timeUntilLabel.text = "Passed"
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     
 //    http://makeapppie.com/tag/uipickerview-in-swift/
     
@@ -53,7 +86,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        nameLabel.text = tempCourses[row]
+        tempConfirmChoiceLabel.text = tempCourses[row]
     }
 
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
