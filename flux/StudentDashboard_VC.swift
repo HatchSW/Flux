@@ -61,6 +61,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         if view == nil {  //if no label there yet
             pickerLabel = UILabel()
             //color the label's background
+            //Hues are spaced between 0 and 1, each will give you a different background color
             let hue = CGFloat(row)/CGFloat(tempCourses.count)
             pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
         }
