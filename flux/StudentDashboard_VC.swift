@@ -9,7 +9,9 @@
 import UIKit
 
 class StudentDashboard_VC: UIViewController {
-
+    
+    
+    var tempCourses = ["Period 1", "Period 2", "Period 3", "Period 4", "Period 5", "Period 6"]
     var student: Student?
     
     @IBOutlet weak var nameLabel: UILabel!
