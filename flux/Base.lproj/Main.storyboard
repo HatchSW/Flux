@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -57,6 +57,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="p0X-Be-TO2" firstAttribute="top" secondItem="tdt-gC-5au" secondAttribute="top" constant="113" id="FzR-aj-UFr"/>
                                         <constraint firstAttribute="trailing" secondItem="p0X-Be-TO2" secondAttribute="trailing" constant="8" id="IGS-4S-FYr"/>
@@ -64,6 +65,7 @@
                                         <constraint firstItem="0wo-LL-KGH" firstAttribute="top" secondItem="p0X-Be-TO2" secondAttribute="bottom" constant="8" id="vhA-0r-dAS"/>
                                     </constraints>
                                 </view>
+                                <animations/>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flux-clipart-ecMAoza5i" translatesAutoresizingMaskIntoConstraints="NO" id="VEL-Fj-lwg">
@@ -203,7 +205,24 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Check-In"/>
+                                <connections>
+                                    <action selector="CheckInButtonPressed:" destination="4na-tA-vek" eventType="touchUpInside" id="MaD-3n-uGE"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp Confirm Choice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-BN-1Bf">
+                                <rect key="frame" x="301" y="741" width="167" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time Until Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmO-uH-csO">
+                                <rect key="frame" x="322" y="513" width="125" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -214,26 +233,40 @@
                             <constraint firstItem="W9g-Eq-FdL" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" constant="-20" id="PlV-C7-cSA"/>
                             <constraint firstItem="W9g-Eq-FdL" firstAttribute="top" secondItem="aHB-0j-dT3" secondAttribute="bottom" constant="8" id="R1R-ld-9QQ"/>
                             <constraint firstItem="gKx-uM-hQf" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" id="T2f-jG-3UV"/>
+                            <constraint firstItem="W9g-Eq-FdL" firstAttribute="top" secondItem="aHB-0j-dT3" secondAttribute="bottom" constant="8" id="TMv-Wl-nJn"/>
                             <constraint firstItem="sft-Rp-8sr" firstAttribute="top" secondItem="W9g-Eq-FdL" secondAttribute="bottom" id="Txs-bb-YTK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W9g-Eq-FdL" secondAttribute="trailing" constant="-20" id="U0v-cz-FoQ"/>
+                            <constraint firstItem="BzI-BN-1Bf" firstAttribute="top" secondItem="fmO-uH-csO" secondAttribute="bottom" constant="207" id="Zc4-QS-CMf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aHB-0j-dT3" secondAttribute="trailing" constant="214" id="Zhh-8k-RYM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aHB-0j-dT3" secondAttribute="trailing" constant="130" id="dmC-4a-cPZ"/>
                             <constraint firstItem="aHB-0j-dT3" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" constant="130" id="dxD-nQ-77I"/>
+                            <constraint firstItem="fmO-uH-csO" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" constant="302" id="eAP-Yf-eJL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fmO-uH-csO" secondAttribute="trailing" constant="301" id="fBy-k6-sSX"/>
+                            <constraint firstItem="aHB-0j-dT3" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" constant="214" id="gif-Va-LVn"/>
+                            <constraint firstItem="aHB-0j-dT3" firstAttribute="top" secondItem="BzI-BN-1Bf" secondAttribute="bottom" constant="8" id="s5R-wS-v8s"/>
                             <constraint firstItem="gKx-uM-hQf" firstAttribute="top" secondItem="iwz-4D-1AG" secondAttribute="bottom" constant="8" id="u3h-bk-a4t"/>
+                            <constraint firstItem="BzI-BN-1Bf" firstAttribute="leading" secondItem="aRO-nB-u6y" secondAttribute="leadingMargin" constant="281" id="uL9-WJ-brH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BzI-BN-1Bf" secondAttribute="trailing" constant="280" id="v1w-PU-hue"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MPK-rb-MJ0"/>
+                                <exclude reference="dmC-4a-cPZ"/>
+                                <exclude reference="dxD-nQ-77I"/>
+                                <exclude reference="R1R-ld-9QQ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="coursePicker" destination="W9g-Eq-FdL" id="FHd-9R-9pE"/>
                         <outlet property="nameLabel" destination="gKx-uM-hQf" id="hhD-na-oNn"/>
+                        <outlet property="tempConfirmChoiceLabel" destination="BzI-BN-1Bf" id="Cdc-d1-5pi"/>
+                        <outlet property="timeUntilLabel" destination="fmO-uH-csO" id="ye1-eH-sHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEz-yh-imn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="70"/>
+            <point key="canvasLocation" x="743" y="78"/>
         </scene>
         <!--Teacher DashboardVC-->
         <scene sceneID="wAC-mM-Oe1">
