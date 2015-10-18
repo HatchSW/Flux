@@ -34,11 +34,22 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         
     }
     
+    //Mark: IBActions
     @IBAction func CheckInButtonPressed(sender: AnyObject) {
         
         //ToDo: Check student into selected class
     }
    
+    @IBAction func logOutPressed(sender: AnyObject) {
+        
+        //remove username and password from NSUserDefaults
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("flux.username")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("flux.password")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    
     func determineTimeTillSas() {
         //SAS starts 9:40 am
         
