@@ -105,6 +105,16 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		9D93DAD41BD219A2002AF35D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D55B8571BCB6D8200491CE0 /* Teacher.swift */,
+				9D55B8551BCB67EE00491CE0 /* Student.swift */,
+				9D55B84B1BCB601B00491CE0 /* Authenticator.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		9DA6D36E1BC9CDD500E90A3A = {
 			isa = PBXGroup;
 			children = (
@@ -128,10 +138,8 @@
 		9DA6D3791BC9CDD500E90A3A /* flux */ = {
 			isa = PBXGroup;
 			children = (
-				9D55B8571BCB6D8200491CE0 /* Teacher.swift */,
-				9D55B8551BCB67EE00491CE0 /* Student.swift */,
-				9D55B84B1BCB601B00491CE0 /* Authenticator.swift */,
 				9DA6D37E1BC9CDD500E90A3A /* Main.storyboard */,
+				9D93DAD41BD219A2002AF35D /* Model */,
 				9D55B8521BCB643A00491CE0 /* View Controllers */,
 				9D55B8511BCB641D00491CE0 /* Resources */,
 			);
@@ -437,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flux/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flux/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";

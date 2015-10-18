@@ -11,8 +11,10 @@ import UIKit
 class Login_VC: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var tryAgainLabel: UILabel!
     
     var authenticatedUser: NSObject?
     
@@ -20,36 +22,66 @@ class Login_VC: UIViewController {
     // MARK: - View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //TODO: load last logged user from NSUserDefaults
         
-        //Mask the profile image into a circle with a white boarder
-        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
-        profileImage.clipsToBounds = true
-        profileImage.layer.borderWidth = 3.0
-        profileImage.layer.borderColor = UIColor.whiteColor().CGColor
+        tryAgainLabel.hidden = true
 
+        //Mask the profile image into a circle with a white boarder
+        profileImage.layer.cornerRadius = 24//(profileImage.frame.size.width / 2)
+        profileImage.clipsToBounds = true
+        profileImage.layer.borderWidth = 4.5
+        profileImage.layer.borderColor = view.backgroundColor?.CGColor
+        
+        loginButton.layer.cornerRadius = 3
+        loginButton.clipsToBounds = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //load last logged user from NSUserDefaults
+        if let usernameDefault:AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("flux.username"){
+            let passwordDefault = NSUserDefaults.standardUserDefaults().objectForKey("flux.password") as! String
+            login(usernameDefault as! String, password: passwordDefault)
+        }
+        
+        //show the keybaord on the username
+        usernameTextField.becomeFirstResponder()
     }
 
     // MARK: - IBActions
     @IBAction func loginPressed(sender: UIButton) {
+        login(usernameTextField.text!, password: passwordTextField.text!)
+    }
+    
+    func login(userName:String, password:String){
+        tryAgainLabel.hidden = true
         
-        let user = Authenticator.authenticate(username.text!, password: password.text!)
+        let user = Authenticator.authenticate(userName, password: password)
         if user.isKindOfClass(Student) {
+            
+            //save username to NSUserDefaults
+            NSUserDefaults.standardUserDefaults().setObject(userName, forKey: "flux.username")
+            NSUserDefaults.standardUserDefaults().setObject(password, forKey: "flux.password")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
             //launch Studnet Dashboard
-            //TODO: save username to NSUserDefaults
             authenticatedUser = user
             performSegueWithIdentifier("Show Student Dashboard", sender: self)
             
         }else if user.isKindOfClass(Teacher){
-            //TODO: save username to NSUserDefaults
+            
+            //save username to NSUserDefaults
+            NSUserDefaults.standardUserDefaults().setObject(userName, forKey: "flux.username")
+            NSUserDefaults.standardUserDefaults().setObject(password, forKey: "flux.password")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
             //launch Teacher Dashboard
             authenticatedUser = user
             performSegueWithIdentifier("Show Teacher Dashboard", sender: self)
             
         }else{
-            //TODO:prompt user with login failure
-            
+            //prompt user with login failure
+            tryAgainLabel.hidden = false
         }
     }
 
@@ -66,7 +98,6 @@ class Login_VC: UIViewController {
             
             let dashboardVC = segue.destinationViewController as! TeacherDashboard_VC
             dashboardVC.teacher = authenticatedUser as? Teacher
-            
         }
     }
 
