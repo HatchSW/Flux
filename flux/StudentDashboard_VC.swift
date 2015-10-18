@@ -51,6 +51,13 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         
         if minute <= 40{
             let untilMinute = 40 - minute
+            
+            if untilMinute <= 5 {
+                timeUntilLabel.textColor = UIColor.redColor()
+            }else{
+                timeUntilLabel.textColor = UIColor.greenColor()
+            }
+            
             timeUntilLabel.text = String(untilMinute) + "minutes"
 
         }else{
