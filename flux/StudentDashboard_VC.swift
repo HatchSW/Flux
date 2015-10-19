@@ -60,6 +60,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         let minute = components.minute;
 //        let second = components.second;
         
+        //change text color depending on how long you have until SAS starts
         if minute <= 40{
             let untilMinute = 40 - minute
             
@@ -69,9 +70,11 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
                 timeUntilLabel.textColor = UIColor.greenColor()
             }
             
-            timeUntilLabel.text = String(untilMinute) + "minutes"
+            timeUntilLabel.text = String(untilMinute) + " minutes until start"
 
         }else{
+            
+            //If SAS has already started
             timeUntilLabel.text = "Passed"
         }
         
