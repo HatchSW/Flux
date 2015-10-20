@@ -26,6 +26,8 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         coursePicker.dataSource = self
         coursePicker.delegate = self
         
+//         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "shorewood.png")!)
+        
         determineTimeTillSas()
         
         //display student information
@@ -50,18 +52,20 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
     }
     
     
+    
+    
     func determineTimeTillSas() {
         //SAS starts 9:40 am
         
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date)
-//        let hour = components.hour;
+        let hour = components.hour;
         let minute = components.minute;
 //        let second = components.second;
         
         //change text color depending on how long you have until SAS starts
-        if minute <= 40{
+        if minute <= 40 && hour == 9{
             let untilMinute = 40 - minute
             
             if untilMinute <= 5 {
@@ -75,16 +79,12 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         }else{
             timeUntilLabel.textColor = UIColor.redColor()
             //If SAS has already started
-            timeUntilLabel.text = "Passed"
+            timeUntilLabel.text = "In Progress"
         }
         
         
         
     }
-    
-    
-    
-    
     
     
     
