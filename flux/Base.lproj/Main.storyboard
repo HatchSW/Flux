@@ -194,7 +194,7 @@
                                 <rect key="frame" x="0.0" y="808" width="768" height="216"/>
                                 <animations/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temp Confirm Choice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-BN-1Bf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Non Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-BN-1Bf">
                                 <rect key="frame" x="301" y="741" width="167" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>

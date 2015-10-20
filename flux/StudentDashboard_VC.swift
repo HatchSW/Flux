@@ -73,7 +73,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
             timeUntilLabel.text = String(untilMinute) + " minutes until start"
 
         }else{
-            
+            timeUntilLabel.textColor = UIColor.redColor()
             //If SAS has already started
             timeUntilLabel.text = "Passed"
         }
