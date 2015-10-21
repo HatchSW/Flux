@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -38,9 +38,6 @@
                                             <state key="normal" title="Temp Teacher">
                                                 <color key="titleColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                             </state>
-                                            <connections>
-                                                <segue destination="6JA-6x-OTQ" kind="show" id="tOa-NS-jLy"/>
-                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0X-Be-TO2">
                                             <rect key="frame" x="657" y="113" width="103" height="30"/>
@@ -171,7 +168,7 @@
                         <outlet property="tryAgainLabel" destination="6ES-Br-rkt" id="wgc-YK-HXA"/>
                         <outlet property="usernameTextField" destination="JeW-oh-W05" id="gKb-2R-7Bl"/>
                         <segue destination="4na-tA-vek" kind="show" identifier="Show Student Dashboard" id="Wzi-TC-MbZ"/>
-                        <segue destination="6JA-6x-OTQ" kind="show" identifier="Show Teacher Dashboard" id="DZn-rg-luL"/>
+                        <segue destination="bbx-jV-dSK" kind="show" id="Gn6-cg-p2S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -190,7 +187,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9g-Eq-FdL">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9g-Eq-FdL">
                                 <rect key="frame" x="0.0" y="808" width="768" height="216"/>
                                 <animations/>
                             </pickerView>
@@ -237,7 +234,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHB-0j-dT3">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHB-0j-dT3">
                                 <rect key="frame" x="234" y="770" width="300" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -325,24 +322,30 @@
             </objects>
             <point key="canvasLocation" x="743" y="78"/>
         </scene>
-        <!--Teacher DashboardVC-->
-        <scene sceneID="wAC-mM-Oe1">
+        <!--Teacher DashboardTVC-->
+        <scene sceneID="HZn-yd-Fkd">
             <objects>
-                <viewController id="6JA-6x-OTQ" customClass="TeacherDashboard_VC" customModule="flux" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uPA-QF-U3b"/>
-                        <viewControllerLayoutGuide type="bottom" id="wDM-lC-Cjv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0sy-ce-qtU">
+                <tableViewController id="bbx-jV-dSK" customClass="TeacherDashboard_TVC" customModule="flux" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ddx-EX-4qm">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Y3-ds-Gz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="0SM-fF-bbs">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="(John Does Classes)" id="e3w-eN-2wI"/>
+                            </items>
+                        </navigationBar>
+                        <connections>
+                            <outlet property="dataSource" destination="bbx-jV-dSK" id="k0z-SP-O4b"/>
+                            <outlet property="delegate" destination="bbx-jV-dSK" id="IoL-Wg-u0E"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgR-l2-fZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="1201"/>
+            <point key="canvasLocation" x="743" y="1218"/>
         </scene>
     </scenes>
     <resources>
@@ -351,6 +354,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Wzi-TC-MbZ"/>
-        <segue reference="DZn-rg-luL"/>
     </inferredMetricsTieBreakers>
 </document>
