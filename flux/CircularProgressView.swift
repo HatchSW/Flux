@@ -2,22 +2,38 @@
 //  CircularProgressView.swift
 //  flux
 //
-//  Created by Quach, Scott on 10/19/15.
+//  Created by Quach, Scott on 10/21/15.
 //  Copyright © 2015 Hatch. All rights reserved.
 //
 
 import UIKit
+import QuartzCore
 
 @IBDesignable
 
 class CircularProgressView: UIView {
+    
+    var backgroundRingLayer: CAShapeLayer!
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        var lineWidth: Double = 10.0
+        
+            backgroundRingLayer = CAShapeLayer()
+            layer.addSublayer(backgroundRingLayer)
+        
+            let rect = CGRectInset(bounds, lineWidth/2.0, lineWidth/2.0)
+            let path = UIBezierPath(ovalInRect: rect)
+            
+            backgroundRingLayer.path = path.CGPath
+            backgroundRingLayer.fillColor = nil
+            backgroundRingLayer.lineWidth = 10.0
+            backgroundRingLayer.strokeColor = UIColor.orangeColor().CGColor
+        
+        
+        //outside temp if
+            backgroundRingLayer.frame = layer.bounds
     }
-    */
-
+    
 }
