@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06621F701BD84761002699A9 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; settings = {ASSET_TAGS = (); }; };
-		0675B56F1BD84D3200C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; settings = {ASSET_TAGS = (); }; };
-		0675B5701BD84D3300C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; settings = {ASSET_TAGS = (); }; };
+		06621F701BD84761002699A9 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; };
+		0675B56F1BD84D3200C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; };
+		0675B5701BD84D3300C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; };
 		6DC3EEFB1BD7FE4D000DE43C /* TeacherDashboard_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3EEFA1BD7FE4D000DE43C /* TeacherDashboard_TVC.swift */; };
 		9D55B84C1BCB601B00491CE0 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84B1BCB601B00491CE0 /* Authenticator.swift */; };
 		9D55B84E1BCB607400491CE0 /* Login_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84D1BCB607400491CE0 /* Login_VC.swift */; };
@@ -501,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = fluxUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.fluxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = fluxUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.fluxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
