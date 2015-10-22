@@ -341,13 +341,12 @@
                             <animations/>
                             <items>
                                 <navigationItem title="(John Does Classes)" id="e3w-eN-2wI">
-                                    <barButtonItem key="leftBarButtonItem" style="plain" id="cIb-N6-zPK">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="inI-5C-aio">
+                                    <barButtonItem key="leftBarButtonItem" style="plain" id="JKX-8E-12q">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="807-bE-fvY">
                                             <rect key="frame" x="-23" y="-15" width="170" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <state key="normal" title="Back"/>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" style="plain" id="U75-XK-Cgc">
@@ -442,6 +441,11 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xdc-QI-qv4" id="MI6-Fg-LHR">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mw-6L-WD3">
+                                            <rect key="frame" x="0.0" y="8" width="768" height="43"/>
+                                        </scrollView>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Mqk-Jd-23Y">
@@ -467,11 +471,6 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXQ-4X-dtN" id="XbU-z7-Ula">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mw-6L-WD3">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
-                                        </scrollView>
-                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sah-kc-q0Z">
@@ -543,4 +542,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="Wzi-TC-MbZ"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.73828373329999997" green="0.60535485410000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
