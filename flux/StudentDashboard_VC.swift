@@ -26,7 +26,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         coursePicker.dataSource = self
         coursePicker.delegate = self
         
-//         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "shorewood.png")!)
+//         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "image.jpeg")!)
         
         determineTimeTillSas()
         
