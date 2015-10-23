@@ -1,5 +1,5 @@
 //
-//  Teacher.swift
+//  Section.swift
 //  flux
 //
 //  Created by Nathan Bruno on 10/22/15.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Teacher: NSManagedObject {
+class Section: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

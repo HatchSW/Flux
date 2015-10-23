@@ -9,6 +9,8 @@
 import UIKit
 
 class TeacherDashboard_TVC: UITableViewController {
+    
+    var teacher: Teacher?
 
     override func viewDidLoad() {
         super.viewDidLoad()

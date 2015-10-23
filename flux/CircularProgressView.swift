@@ -18,7 +18,7 @@ class CircularProgressView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        var lineWidth: Double = 10.0
+        let lineWidth: CGFloat = 10.0
         
             backgroundRingLayer = CAShapeLayer()
             layer.addSublayer(backgroundRingLayer)
