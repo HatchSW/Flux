@@ -69,42 +69,40 @@ class CircularProgressView: UIView {
     
     func updateLayerProperties() {
         if (ringLayer != nil) {
-            ringLayer.strokeEnd = CGFloat(progress)
             
-            let strokeColor = UIColor.orangeColor()
-        
+            
+            var strokeColor = UIColor.orangeColor()
+            
+            
+            //SAS starts 9:40 am
+            let date = NSDate()
+            let calendar = NSCalendar.currentCalendar()
+            let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date)
+            let hour = components.hour;
+            let minute = components.minute;
+            //        let second = components.second;
+            
+            //change text color depending on how long you have until SAS starts
+            if minute <= 40 && hour == 9{
+                let untilMinute = 40 - minute
+                
+//                progress = 15.0/Double(untilMinute
+                
+                if untilMinute <= 5 {
+                    strokeColor = UIColor.redColor()
+                }else{
+                   strokeColor = UIColor.greenColor()
+                }
+            }
+
+            
+            
+            
+            
+            ringLayer.strokeEnd = CGFloat(progress)
             ringLayer.strokeColor = strokeColor.CGColor
         }
     }
     
-    func determineTimeTillSas() {
-        //SAS starts 9:40 am
-        
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date)
-        let hour = components.hour;
-        let minute = components.minute;
-        //        let second = components.second;
-        
-        //change text color depending on how long you have until SAS starts
-        if minute <= 40 && hour == 9{
-            let untilMinute = 40 - minute
-            
-            if untilMinute <= 5 {
-                stro = UIColor.redColor()
-            }else{
-                timeUntilLabel.textColor = UIColor.greenColor()
-            }
-            
-            timeUntilLabel.text = String(untilMinute) + " minutes until start"
-            
-        }else{
-            timeUntilLabel.textColor = UIColor.redColor()
-            //If SAS has already started
-            timeUntilLabel.text = "In Progress"
-        }
-        
-    }
     
 }
