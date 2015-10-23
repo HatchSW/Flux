@@ -22,7 +22,7 @@ class Authenticator: NSObject {
         newStudent.firstName = "Zane"
         newStudent.lastName = "Godfrey"
         newStudent.studentID = "099999"
-        NSLog("Inserted New Student named \(newStudent) ")
+        print("Inserted New Student named \(newStudent) ")
         appDelegate.cdh.saveContext(appDelegate.cdh.backgroundContext!)
         return newStudent
     }
