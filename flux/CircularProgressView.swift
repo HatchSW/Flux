@@ -13,13 +13,22 @@ import QuartzCore
 
 class CircularProgressView: UIView {
     
+    var ringLayer: CAShapeLayer!
     var backgroundRingLayer: CAShapeLayer!
-
+    
+    @IBInspectable var progress: Double = 0.6{
+        didSet {updateLayerProperties() }
+    }
+    
+    var lineWidth: CGFloat = 10.0 {
+        didSet {updateLayerProperties() }
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let lineWidth: CGFloat = 10.0
         
+        
+        if !(backgroundRingLayer != nil){
             backgroundRingLayer = CAShapeLayer()
             layer.addSublayer(backgroundRingLayer)
         
@@ -29,11 +38,71 @@ class CircularProgressView: UIView {
             backgroundRingLayer.path = path.CGPath
             backgroundRingLayer.fillColor = nil
             backgroundRingLayer.lineWidth = 10.0
-            backgroundRingLayer.strokeColor = UIColor.orangeColor().CGColor
+            backgroundRingLayer.strokeColor = UIColor(white:0.5, alpha:0.3).CGColor
         
-        
+        }
         //outside temp if
             backgroundRingLayer.frame = layer.bounds
+        
+        if !(ringLayer != nil){
+            ringLayer = CAShapeLayer()
+            layer.addSublayer(backgroundRingLayer)
+            
+            let rect = CGRectInset(bounds, lineWidth/2.0, lineWidth/2.0)
+            let path = UIBezierPath(ovalInRect: rect)
+            
+            ringLayer.path = path.CGPath
+            ringLayer.fillColor = nil
+            ringLayer.lineWidth = 10.0
+            ringLayer.strokeColor = UIColor.orangeColor().CGColor
+            ringLayer.anchorPoint = CGPointMake(0.5, 0.5)
+            ringLayer.transform = CATransform3DRotate(ringLayer.transform, CGFloat(-M_PI/2), 0, 0, 1)
+            
+            layer.addSublayer(ringLayer)
+            
+        }
+        
+        ringLayer.frame = layer.bounds
+        updateLayerProperties()
+
     }
+    
+    func updateLayerProperties() {
+        if (ringLayer != nil) {
+            
+            
+            var strokeColor = UIColor.orangeColor()
+            
+            
+            //SAS starts 9:40 am
+            let date = NSDate()
+            let calendar = NSCalendar.currentCalendar()
+            let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date)
+            let hour = components.hour;
+            let minute = components.minute;
+            //        let second = components.second;
+            
+            //change text color depending on how long you have until SAS starts
+            if minute <= 40 && hour == 9{
+                let untilMinute = 40 - minute
+                
+//                progress = 15.0/Double(untilMinute
+                
+                if untilMinute <= 5 {
+                    strokeColor = UIColor.redColor()
+                }else{
+                   strokeColor = UIColor.greenColor()
+                }
+            }
+
+            
+            
+            
+            
+            ringLayer.strokeEnd = CGFloat(progress)
+            ringLayer.strokeColor = strokeColor.CGColor
+        }
+    }
+    
     
 }
