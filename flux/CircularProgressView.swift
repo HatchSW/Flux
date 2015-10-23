@@ -16,6 +16,9 @@ class CircularProgressView: UIView {
     var ringLayer: CAShapeLayer!
     var backgroundRingLayer: CAShapeLayer!
     
+    var strokeColor = UIColor.orangeColor()
+
+    
     @IBInspectable var progress: Double = 0.6{
         didSet {updateLayerProperties() }
     }
@@ -26,7 +29,7 @@ class CircularProgressView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        
+        determineUntilSAS()
         
         if !(backgroundRingLayer != nil){
             backgroundRingLayer = CAShapeLayer()
@@ -86,7 +89,7 @@ class CircularProgressView: UIView {
             if minute <= 40 && hour == 9{
                 let untilMinute = 40 - minute
                 
-//                progress = 15.0/Double(untilMinute
+                progress = 15.0/Double(untilMinute)
                 
                 if untilMinute <= 5 {
                     strokeColor = UIColor.redColor()
@@ -94,6 +97,8 @@ class CircularProgressView: UIView {
                    strokeColor = UIColor.greenColor()
                 }
             }
+                
+            
 
             
             
@@ -102,6 +107,33 @@ class CircularProgressView: UIView {
             ringLayer.strokeEnd = CGFloat(progress)
             ringLayer.strokeColor = strokeColor.CGColor
         }
+    }
+    
+    func determineUntilSAS() {
+        //SAS starts 9:40 am
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date)
+        let hour = components.hour;
+        let minute = components.minute;
+        //        let second = components.second;
+        
+        //change text color depending on how long you have until SAS starts
+        if minute <= 40{
+            let untilMinute = 40 - minute
+            
+            progress = 1.0/Double(untilMinute)
+            
+            if untilMinute <= 5 {
+                strokeColor = UIColor.redColor()
+            }else{
+                strokeColor = UIColor.greenColor()
+            }
+            
+        }else{
+            progress = 0.9
+        }
+
     }
     
     

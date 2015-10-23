@@ -114,11 +114,11 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
             pickerLabel = UILabel()
             //color the label's background
             //Hues are spaced between 0 and 1, each will give you a different background color
-            let hue = CGFloat(row)/CGFloat(tempCourses.count)
-            pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+//            let hue = CGFloat(row)/CGFloat(tempCourses.count)
+//            pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
         }
         let titleData = tempCourses[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "AppleSDGothicNeo-Medium", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
         pickerLabel!.attributedText = myTitle
         pickerLabel!.textAlignment = .Center
         return pickerLabel
