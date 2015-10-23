@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Authenticator: NSObject {
 
@@ -15,6 +16,14 @@ class Authenticator: NSObject {
     class func authenticate(username: String, password: String) -> NSObject {
         
         //this is just a stub until we get all the cloudkit stuff figured out
-        return Student(first: "Zane", last: "Godfrey", studentID: "099999");
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let newStudent: Student = NSEntityDescription.insertNewObjectForEntityForName("Student", inManagedObjectContext: appDelegate.cdh.backgroundContext!) as! Student
+        
+        newStudent.firstName = "Zane"
+        newStudent.lastName = "Godfrey"
+        newStudent.studentID = "099999"
+        NSLog("Inserted New Student named \(newStudent) ")
+        appDelegate.cdh.saveContext(appDelegate.cdh.backgroundContext!)
+        return newStudent
     }
 }

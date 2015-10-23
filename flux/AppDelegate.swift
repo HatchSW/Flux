@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        self.cdh.saveContext()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -34,13 +34,110 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        //demoData() //for testing out core data
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        self.cdh.saveContext()
     }
-
-
+    
+    // #pragma mark - Core Data Helper
+    
+    lazy var cdstore: CoreDataStore = {
+        let cdstore = CoreDataStore()
+        return cdstore
+        }()
+    
+    lazy var cdh: CoreDataHelper = {
+        let cdh = CoreDataHelper()
+        return cdh
+        }()
+    
+    // #pragma mark - Demo
+    
+    func demoStudents(){
+        
+    }
+    
+    func demoData(){
+        NSLog(" ======================== ")
+        NSLog(" ======== Student ======== ")
+        
+        let newItemNames = ["Apples", "Milk", "Bread", "Cheese", "Sausages", "Butter", "Orange Juice", "Cereal", "Coffee", "Eggs", "Tomatoes", "Fish"]
+        
+        // add families
+        NSLog(" ======== Insert ======== ")
+        
+        for newItemName in newItemNames {
+            let newItem: Student = NSEntityDescription.insertNewObjectForEntityForName("Student", inManagedObjectContext: self.cdh.backgroundContext!) as! Student
+            
+            newItem.firstName = newItemName
+            NSLog("Inserted New Student named \(newItemName) ")
+        }
+        
+        self.cdh.saveContext(self.cdh.backgroundContext!)
+        
+        //fetch students
+        NSLog(" ======== Fetch ======== ")
+        var error: NSError? = nil
+        var fReq: NSFetchRequest = NSFetchRequest(entityName: "Student")
+        
+        fReq.predicate = NSPredicate(format:"firstName CONTAINS 'B' ")
+        
+        let sorter: NSSortDescriptor = NSSortDescriptor(key: "firstName" , ascending: false)
+        fReq.sortDescriptors = [sorter]
+        
+        fReq.returnsObjectsAsFaults = false
+        
+        var result: [AnyObject]?
+        do {
+            result = try self.cdh.managedObjectContext.executeFetchRequest(fReq)
+        } catch let nserror1 as NSError{
+            error = nserror1
+            result = nil
+        }
+        
+        for resultItem in result! {
+            let studentItem = resultItem as! Student
+            NSLog("Found a student name with a B in it: \(studentItem.firstName) ")
+        }
+        
+        //delete families
+        NSLog(" ======== Delete ======== ")
+        
+        fReq = NSFetchRequest(entityName: "Student")
+        do {
+            result = try self.cdh.backgroundContext!.executeFetchRequest(fReq)
+        } catch let nserror1 as NSError{
+            error = nserror1
+            result = nil
+        }
+        
+        for resultItem in result! {
+            let studentItem = resultItem as! Student
+            NSLog("Deleted Student with first name \(studentItem.firstName) ")
+            self.cdh.backgroundContext!.deleteObject(studentItem)
+        }
+        
+        self.cdh.saveContext(self.cdh.backgroundContext!)
+        
+        NSLog(" ======== Check Delete ======== ")
+        
+        do {
+            result = try self.cdh.managedObjectContext.executeFetchRequest(fReq)
+        } catch let nserror1 as NSError{
+            error = nserror1
+            result = nil
+        }
+        if result!.isEmpty {
+            NSLog("Deleted All Students")
+        }
+        else{
+            for resultItem in result! {
+                let studentItem = resultItem as! Student
+                NSLog("Fetched Error Student named: \(studentItem.firstName) ")
+            }
+        }
+    }
 }
 

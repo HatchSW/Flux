@@ -81,9 +81,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
             //If SAS has already started
             timeUntilLabel.text = "In Progress"
         }
-        
-        
-        
+ 
     }
     
     
@@ -124,7 +122,6 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
         pickerLabel!.attributedText = myTitle
         pickerLabel!.textAlignment = .Center
         return pickerLabel
-        
     }
     
-    }
+}

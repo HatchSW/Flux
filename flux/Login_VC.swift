@@ -96,7 +96,7 @@ class Login_VC: UIViewController {
             
         }else if segue.identifier == "Show Teacher Dashboard"{
             
-            let dashboardVC = segue.destinationViewController as! TeacherDashboard_VC
+            let dashboardVC = segue.destinationViewController as! TeacherDashboard_TVC
             dashboardVC.teacher = authenticatedUser as? Teacher
         }
     }
