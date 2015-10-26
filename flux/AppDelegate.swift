@@ -91,8 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var result: [AnyObject]?
         do {
-            result = try self.cdh.managedObjectContext.executeFetchRequest(fReq)
-        } catch let nserror1 as NSError{
+            result = try; self.cdh.managedObjectContext.executeFetchRequest(fReq)
+        } catch let nserror1; as NSError{
             error = nserror1
             result = nil
         }
@@ -107,8 +107,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         fReq = NSFetchRequest(entityName: "Student")
         do {
-            result = try self.cdh.backgroundContext!.executeFetchRequest(fReq)
-        } catch let nserror1 as NSError{
+            result = try; self.cdh.backgroundContext!.executeFetchRequest(fReq)
+        } catch let nserror1; as NSError{
             error = nserror1
             result = nil
         }
@@ -124,7 +124,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSLog(" ======== Check Delete ======== ")
         
         do {
-            result = try self.cdh.managedObjectContext.executeFetchRequest(fReq)
+            result = try; self.cdh.managedObjectContext.executeFetchRequest(fReq)
         } catch let nserror1 as NSError{
             error = nserror1
             result = nil
