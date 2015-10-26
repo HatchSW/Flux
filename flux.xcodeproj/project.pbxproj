@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06621F701BD84761002699A9 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; settings = {ASSET_TAGS = (); }; };
-		0675B56F1BD84D3200C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; settings = {ASSET_TAGS = (); }; };
-		0675B5701BD84D3300C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; settings = {ASSET_TAGS = (); }; };
+		06621F701BD84761002699A9 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; };
+		0675B56F1BD84D3200C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; };
+		0675B5701BD84D3300C738DF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06621F6F1BD84761002699A9 /* CircularProgressView.swift */; };
 		6DC3EEFB1BD7FE4D000DE43C /* TeacherDashboard_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3EEFA1BD7FE4D000DE43C /* TeacherDashboard_TVC.swift */; };
 		9D55B84C1BCB601B00491CE0 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84B1BCB601B00491CE0 /* Authenticator.swift */; };
 		9D55B84E1BCB607400491CE0 /* Login_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55B84D1BCB607400491CE0 /* Login_VC.swift */; };
@@ -20,15 +20,15 @@
 		9DA6D3851BC9CDD500E90A3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6D3831BC9CDD500E90A3A /* LaunchScreen.storyboard */; };
 		9DA6D3901BC9CDD500E90A3A /* fluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6D38F1BC9CDD500E90A3A /* fluxTests.swift */; };
 		9DA6D39B1BC9CDD500E90A3A /* fluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6D39A1BC9CDD500E90A3A /* fluxUITests.swift */; };
-		9DFC35C91BD9F179005D6480 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35C71BD9F179005D6480 /* CoreDataHelper.swift */; settings = {ASSET_TAGS = (); }; };
-		9DFC35CA1BD9F179005D6480 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35C81BD9F179005D6480 /* CoreDataStore.swift */; settings = {ASSET_TAGS = (); }; };
-		9DFC35CD1BD9F1BB005D6480 /* flux.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35CB1BD9F1BB005D6480 /* flux.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		9DFC35D91BD9FF97005D6480 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35D51BD9FF97005D6480 /* Section.swift */; settings = {ASSET_TAGS = (); }; };
-		9DFC35E31BD9FFF2005D6480 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35DE1BD9FFF2005D6480 /* Student.swift */; settings = {ASSET_TAGS = (); }; };
-		9DFC35E51BD9FFF2005D6480 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E01BD9FFF2005D6480 /* Teacher.swift */; settings = {ASSET_TAGS = (); }; };
-		9DFC35E91BDA0062005D6480 /* Section+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E61BDA0062005D6480 /* Section+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		9DFC35EA1BDA0062005D6480 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E71BDA0062005D6480 /* Student+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		9DFC35EB1BDA0062005D6480 /* Teacher+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E81BDA0062005D6480 /* Teacher+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		9DFC35C91BD9F179005D6480 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35C71BD9F179005D6480 /* CoreDataHelper.swift */; };
+		9DFC35CA1BD9F179005D6480 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35C81BD9F179005D6480 /* CoreDataStore.swift */; };
+		9DFC35CD1BD9F1BB005D6480 /* flux.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35CB1BD9F1BB005D6480 /* flux.xcdatamodeld */; };
+		9DFC35D91BD9FF97005D6480 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35D51BD9FF97005D6480 /* Section.swift */; };
+		9DFC35E31BD9FFF2005D6480 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35DE1BD9FFF2005D6480 /* Student.swift */; };
+		9DFC35E51BD9FFF2005D6480 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E01BD9FFF2005D6480 /* Teacher.swift */; };
+		9DFC35E91BDA0062005D6480 /* Section+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E61BDA0062005D6480 /* Section+CoreDataProperties.swift */; };
+		9DFC35EA1BDA0062005D6480 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E71BDA0062005D6480 /* Student+CoreDataProperties.swift */; };
+		9DFC35EB1BDA0062005D6480 /* Teacher+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC35E81BDA0062005D6480 /* Teacher+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -481,7 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flux/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flux/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hatch.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
