@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate, UITableViewDataSource   {
+class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate   {
     
     
     var tempCourses = ["Period 1", "Period 2", "Period 3", "Period 4", "Period 5", "Period 6"]

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class TeacherDashboard_TVC: UITableViewController {
+class TeacherDashboard_TVC: UITableViewController,UITableViewDataSource, UITableViewDelegate, UI {
     
-    @IBOutlet weak var tableView: UITableView!
+
+    @IBOutlet var teacherTableView: UITableView!
+    
     
     var teacher: Teacher?
 

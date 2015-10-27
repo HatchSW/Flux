@@ -394,6 +394,7 @@
                     <navigationItem key="navigationItem" id="U9x-Wb-keM"/>
                     <connections>
                         <outlet property="tableView" destination="Xik-P0-Gz3" id="0H8-Dx-Yuv"/>
+                        <outlet property="teacherTableView" destination="Xik-P0-Gz3" id="Dws-hk-SBK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgR-l2-fZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
