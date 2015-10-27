@@ -80,7 +80,7 @@ class CircularProgressView: UIView {
             //SAS starts 9:40 am
             let date = NSDate()
             let calendar = NSCalendar.currentCalendar()
-            let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date)
+            let components = calendar.components([ .Day, .Hour, .Minute, .Second], fromDate: date)
             let hour = components.hour;
             let minute = components.minute;
             //        let second = components.second;
@@ -113,7 +113,7 @@ class CircularProgressView: UIView {
         //SAS starts 9:40 am
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([ .Day, .Hour, .Minute, .Second], fromDate: date)
+        let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: Date)
         let hour = components.hour;
         let minute = components.minute;
         //        let second = components.second;
