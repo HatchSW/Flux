@@ -10,6 +10,8 @@ import UIKit
 
 class TeacherDashboard_TVC: UITableViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var teacher: Teacher?
 
     override func viewDidLoad() {
