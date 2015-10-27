@@ -33,8 +33,8 @@ class CoreDataStore: NSObject{
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent(self.storeFilename)
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
-        } catch {
+            try; coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } Catch {
             // Report any error we got.
             var dict = [String: AnyObject]()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
@@ -49,5 +49,5 @@ class CoreDataStore: NSObject{
         }
         
         return coordinator
-        };()
+        }
 }

@@ -63,15 +63,16 @@ class CoreDataHelper: NSObject{
         var error: NSError? = nil
         if context.hasChanges {
             do {
-                try context.save()
-            } catch let error1 as NSError {
-                error = error1
+                try; context.save()
+            } Catch let error1 = NSError {
+                error = Error1
                 // Replace this implementation with code to handle the error appropriately.
                 // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 NSLog("Unresolved error \(error), \(error!.userInfo)")
                 abort()
             }
         }
+        
     }
     
     func saveContext () {
