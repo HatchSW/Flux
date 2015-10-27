@@ -399,7 +399,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgR-l2-fZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="XBL-0g-7EP"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="1226"/>
+            <point key="canvasLocation" x="1583" y="1242"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gu0-HC-aa1">
