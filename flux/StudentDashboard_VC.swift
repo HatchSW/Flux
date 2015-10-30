@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
@@ -19,6 +20,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tempConfirmChoiceLabel: UILabel!
     @IBOutlet weak var timeUntilLabel: UILabel!
+    @IBOutlet weak var checkInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,9 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
          self.view.backgroundColor = UIColor(patternImage: UIImage(named: "studentDashboardBackground.jpeg")!)
         
         determineTimeTillSas()
+        
+        checkInButton.layer.cornerRadius = 10; // this value vary as per your desire
+        checkInButton.clipsToBounds = true;
         
         //display student information
 //        nameLabel.text = "\(student!.firstName) \(student!.lastName)"
@@ -114,11 +119,11 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
             pickerLabel = UILabel()
             //color the label's background
             //Hues are spaced between 0 and 1, each will give you a different background color
-            let hue = CGFloat(row)/CGFloat(tempCourses.count)
-            pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+//            let hue = CGFloat(row)/CGFloat(tempCourses.count)
+//            pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
         }
         let titleData = tempCourses[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "AppleSDGothicNeo-SemiBold", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
         pickerLabel!.attributedText = myTitle
         pickerLabel!.textAlignment = .Center
         return pickerLabel
