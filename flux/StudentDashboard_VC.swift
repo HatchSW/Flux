@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
@@ -19,6 +20,7 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tempConfirmChoiceLabel: UILabel!
     @IBOutlet weak var timeUntilLabel: UILabel!
+    @IBOutlet weak var checkInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,9 @@ class StudentDashboard_VC: UIViewController,UIPickerViewDataSource,UIPickerViewD
          self.view.backgroundColor = UIColor(patternImage: UIImage(named: "studentDashboardBackground.jpeg")!)
         
         determineTimeTillSas()
+        
+        checkInButton.layer.cornerRadius = 10; // this value vary as per your desire
+        checkInButton.clipsToBounds = true;
         
         //display student information
 //        nameLabel.text = "\(student!.firstName) \(student!.lastName)"
