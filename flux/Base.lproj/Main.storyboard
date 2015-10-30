@@ -362,7 +362,7 @@
             </objects>
             <point key="canvasLocation" x="743" y="78"/>
         </scene>
-        <!--Teacher DashboardTVC-->
+        <!--Title-->
         <scene sceneID="HZn-yd-Fkd">
             <objects>
                 <tableViewController id="bbx-jV-dSK" customClass="TeacherDashboard_TVC" customModule="flux" customModuleProvider="target" sceneMemberID="viewController">
@@ -391,8 +391,9 @@
                             <outlet property="delegate" destination="bbx-jV-dSK" id="rRj-kW-VfU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="U9x-Wb-keM"/>
+                    <navigationItem key="navigationItem" title="Title" prompt="Back" id="fs9-X4-uBB"/>
                     <connections>
+                        <outlet property="navigationBackButton" destination="fs9-X4-uBB" id="owJ-kv-ztY"/>
                         <outlet property="tableView" destination="Xik-P0-Gz3" id="0H8-Dx-Yuv"/>
                         <outlet property="teacherTableView" destination="Xik-P0-Gz3" id="Dws-hk-SBK"/>
                     </connections>

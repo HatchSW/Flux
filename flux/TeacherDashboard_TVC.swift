@@ -8,13 +8,16 @@
 
 import UIKit
 
-class TeacherDashboard_TVC: UITableViewController,UITableViewDataSource, UITableViewDelegate, UI {
+class TeacherDashboard_TVC: UITableViewController,UITableViewDataSource, UITableViewDelegate {
     
 
     @IBOutlet var teacherTableView: UITableView!
+    @IBOutlet var navigationBackButton: UINavigationItem!
     
     
     var teacher: Teacher?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
