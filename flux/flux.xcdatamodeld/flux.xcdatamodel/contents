@@ -5,22 +5,27 @@
         <attribute name="period" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="sections" inverseEntity="Student" syncable="YES"/>
-        <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="sections" inverseEntity="Teacher" syncable="YES"/>
+        <relationship name="teacher" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Teacher" inverseName="sections" inverseEntity="Teacher" syncable="YES"/>
     </entity>
     <entity name="Student" representedClassName=".Student" syncable="YES">
+        <attribute name="checkedIn" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="studentID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="homeSas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Section" syncable="YES"/>
         <relationship name="sections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Section" inverseName="students" inverseEntity="Section" syncable="YES"/>
     </entity>
     <entity name="Teacher" representedClassName=".Teacher" syncable="YES">
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="checkedInStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
+        <relationship name="mySasStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
         <relationship name="sections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Section" inverseName="teacher" inverseEntity="Section" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Section" positionX="-126" positionY="-289" width="128" height="120"/>
-        <element name="Student" positionX="81" positionY="-270" width="128" height="103"/>
-        <element name="Teacher" positionX="-333" positionY="-250" width="128" height="88"/>
+        <element name="Section" positionX="-126" positionY="-289" width="128" height="118"/>
+        <element name="Student" positionX="81" positionY="-270" width="128" height="148"/>
+        <element name="Teacher" positionX="-333" positionY="-250" width="128" height="118"/>
     </elements>
 </model>
