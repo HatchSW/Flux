@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+      
         return true
     }
 
@@ -35,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         //demoData() //for testing out core data
+        demoStudents()
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -56,6 +59,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // #pragma mark - Demo
     
     func demoStudents(){
+        
+        //we need to get the app delegate in order to get the core data ManagedObjectContext
+        //let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        //make a new student
+        let newStudent: Student = NSEntityDescription.insertNewObjectForEntityForName("Student", inManagedObjectContext: cdh.backgroundContext!) as! Student
+        
+        //populate the object with real data
+        newStudent.firstName = "Zane"
+        newStudent.lastName = "Godfrey"
+        newStudent.studentID = "099999"
+        newStudent.password = "099999"
+        
+        //see if it worked
+        print("Inserted New Student named \(newStudent) ")
+        
+        //Important: save
+        cdh.saveContext(cdh.backgroundContext!)
+        
         
     }
     

@@ -194,7 +194,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Non Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-BN-1Bf">
                                 <rect key="frame" x="301" y="741" width="167" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time Until Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmO-uH-csO">
+                                <rect key="frame" x="234" y="560" width="300" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -352,6 +359,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="checkInButton" destination="aHB-0j-dT3" id="LqS-X2-hhQ"/>
                         <outlet property="coursePicker" destination="W9g-Eq-FdL" id="FHd-9R-9pE"/>
                         <outlet property="nameLabel" destination="gKx-uM-hQf" id="hhD-na-oNn"/>
                         <outlet property="tempConfirmChoiceLabel" destination="BzI-BN-1Bf" id="Cdc-d1-5pi"/>
